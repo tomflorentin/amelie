@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #2c2233;
+  --paper: #fdfaf3;
+  --paper-soft: #f6ecd9;
+  --dusk: #4a2f56;
+  --dusk-soft: #6b4a78;
+  --ember: #b9782c;
+  --ember-soft: #f0bd72;
+  --mauve: #a3708d;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-soft: var(--paper-soft);
+  --color-dusk: var(--dusk);
+  --color-dusk-soft: var(--dusk-soft);
+  --color-ember: var(--ember);
+  --color-ember-soft: var(--ember-soft);
+  --color-mauve: var(--mauve);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-karla);
+}
+
+body {
+  position: relative;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Grain: a faint tactile texture so flat colour fields feel handmade, not templated. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+.aura {
+  position: relative;
+  isolation: isolate;
+}
+
+.aura::before {
+  content: "";
+  position: absolute;
+  inset: -16%;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 50% 40%,
+    color-mix(in srgb, var(--ember-soft) 70%, transparent) 0%,
+    color-mix(in srgb, var(--ember-soft) 30%, transparent) 45%,
+    transparent 72%
+  );
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.spark {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(3px);
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--ember-soft) 90%, transparent) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    animation: reveal-up 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .spark {
+    animation: spark-float 8s ease-in-out infinite;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spark-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate3d(8px, -18px, 0) scale(1.15);
+    opacity: 0.9;
+  }
+}

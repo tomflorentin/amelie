@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fbf6ee;
+  --color-cream-deep: #f3e9da;
+  --color-brown: #4d321f;
+  --color-brown-soft: #7a5c42;
+  --color-olive: #687a35;
+  --color-olive-dark: #55632a;
+  --color-leaf: #8fa54d;
+  --color-honey: #b77d43;
+  --color-sky: #a9c9d4;
+  --color-terracotta: #c9826d;
+
+  --font-serif: var(--font-lora);
+  --font-sans: var(--font-nunito);
+  --font-script: var(--font-caveat);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-brown);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-leaf);
+  color: var(--color-cream);
+}
+
+.font-serif-display {
+  font-family: var(--font-serif);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.leaf-divider {
+  background-image: radial-gradient(
+    circle,
+    var(--color-leaf) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 12px 12px;
+}
