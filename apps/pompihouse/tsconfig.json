@@ -19,7 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@google-reviews": ["../../packages/google-reviews/src/index.ts"],
+      "@google-reviews-data/*": ["../../packages/google-reviews/data/*"]
     }
   },
   "include": [

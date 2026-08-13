@@ -42,6 +42,39 @@ export function PawIcon({ className }: { className?: string }) {
   );
 }
 
+export function SnowflakeIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path
+        d="M12 2v20M4.93 5.93l14.14 12.14M4.93 18.07 19.07 5.93M5 12h14"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+      <path
+        d="m12 2-1.7 2M12 2l1.7 2M12 22l-1.7-2M12 22l1.7-2M4.93 5.93l2.6.3M4.93 5.93l.3 2.6M19.07 18.07l-2.6-.3M19.07 18.07l-.3-2.6M4 12l2 1M4 12l2-1M20 12l-2 1M20 12l-2-1"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function CameraIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path
+        d="M4 7.5h3l1.3-2h7.4l1.3 2h3v11H4v-11Z"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+      <circle cx="12" cy="13" r="3.2" stroke="currentColor" strokeWidth="1.7" />
+    </svg>
+  );
+}
+
 export function PawTrail({ className }: { className?: string }) {
   return (
     <svg

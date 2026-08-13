@@ -1,6 +1,6 @@
-import Image from "next/image";
 import chalet from "@/assets/images/chalet-exterieur.jpg";
-import { LeafIcon, PawTrail } from "@/components/Decorations";
+import { ZoomableImage } from "@/components/ZoomableImage";
+import { LeafIcon } from "@/components/Decorations";
 
 const PROMISES = [
   "Environnement sécurisé et verdoyant",
@@ -59,12 +59,11 @@ export function Hero() {
             </a>
           </div>
 
-          <PawTrail className="mt-8 hidden h-8 w-40 text-honey sm:block" />
         </div>
 
         <div className="relative">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2.5rem] shadow-xl ring-8 ring-cream">
-            <Image
+            <ZoomableImage
               src={chalet}
               alt="Le chalet en bois de la PompiHouse, sous un ciel bleu, à La Motte"
               fill

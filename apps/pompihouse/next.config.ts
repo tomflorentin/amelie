@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
+import path from "node:path";
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  transpilePackages: ["@amelienergie/google-reviews"],
   turbopack: {
-    root: __dirname,
+    root: path.join(__dirname, "../.."),
   },
 };
 

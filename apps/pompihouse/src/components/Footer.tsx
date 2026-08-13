@@ -1,5 +1,5 @@
-import Image from "next/image";
 import logo from "@/assets/images/logo.png";
+import { ZoomableImage } from "@/components/ZoomableImage";
 import { LeafIcon } from "@/components/Decorations";
 
 export function Footer() {
@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-[1.2fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <Image
+              <ZoomableImage
                 src={logo}
                 alt="La PompiHouse"
                 className="h-14 w-14 object-contain"

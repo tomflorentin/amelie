@@ -1,5 +1,5 @@
-import Image from "next/image";
 import logo from "@/assets/images/logo.png";
+import { ZoomableImage } from "@/components/ZoomableImage";
 import { CloverIcon, LeafIcon, PawIcon } from "@/components/Decorations";
 
 const HIGHLIGHTS = [
@@ -28,7 +28,7 @@ export function Presentation() {
           <div className="relative mx-auto w-full max-w-xs lg:max-w-sm">
             <div className="absolute inset-0 -rotate-3 rounded-[2rem] bg-olive/10" />
             <div className="relative rounded-[2rem] bg-cream-deep p-8 ring-1 ring-brown/5">
-              <Image
+              <ZoomableImage
                 src={logo}
                 alt="Logo La PompiHouse, un lapin et un cochon d'Inde"
                 className="mx-auto h-auto w-full max-w-[260px] object-contain"

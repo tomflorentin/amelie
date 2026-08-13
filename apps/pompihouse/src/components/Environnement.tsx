@@ -1,8 +1,8 @@
-import Image from "next/image";
 import chalet from "@/assets/images/chalet-exterieur.jpg";
 import interieur from "@/assets/images/interieur-cabanes.jpg";
 import enclos from "@/assets/images/enclos-exterieur.jpg";
 import { LeafIcon } from "@/components/Decorations";
+import { ZoomableImage } from "@/components/ZoomableImage";
 
 const PHOTOS = [
   {
@@ -49,7 +49,7 @@ export function Environnement() {
               className="group overflow-hidden rounded-3xl bg-cream shadow-sm ring-1 ring-brown/5"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
+                <ZoomableImage
                   src={photo.src}
                   alt={photo.alt}
                   fill

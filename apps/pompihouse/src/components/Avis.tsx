@@ -1,8 +1,18 @@
-import Image from "next/image";
+import {
+  getStaticGoogleFiveStarReviews,
+  mergeTestimonials,
+} from "@google-reviews";
+import pompihouseReviews from "@google-reviews-data/pompihouse.json";
 import fiche from "@/assets/images/fiche-nuts.jpg";
 import { CloverIcon, LeafIcon } from "@/components/Decorations";
+import { ZoomableImage } from "@/components/ZoomableImage";
 
 export function Avis() {
+  const reviews = mergeTestimonials(
+    [],
+    getStaticGoogleFiveStarReviews(pompihouseReviews),
+  );
+
   return (
     <section id="avis" className="bg-cream-deep">
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
@@ -14,35 +24,66 @@ export function Avis() {
             La confiance, ça se construit
           </h2>
           <p className="mt-4 text-base leading-relaxed text-brown-soft">
-            La PompiHouse démarre son activité en ligne : les premiers avis
-            seront bientôt publiés ici. En attendant, chaque séjour donne
-            lieu à des nouvelles et des photos comme celles reçues par les
-            propriétaires de Nuts, l&apos;un de nos pensionnaires.
+            Découvrez les retours des familles qui nous confient leurs petits
+            compagnons. Chaque séjour donne aussi lieu à des nouvelles et des
+            photos comme celles reçues par les propriétaires de Nuts.
           </p>
         </div>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-          <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-3xl shadow-lg ring-1 ring-brown/5">
-            <Image
-              src={fiche}
-              alt="Fiche de séjour de Nuts, lapin nain bélier de 8 ans, envoyée après deux semaines de vacances à la PompiHouse"
-              sizes="(max-width: 1024px) 90vw, 420px"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-
-          <div className="space-y-5">
+          <div className="mx-auto w-full max-w-sm space-y-5">
             <div className="flex items-start gap-3 rounded-2xl bg-cream p-5 ring-1 ring-brown/5">
               <LeafIcon className="mt-1 h-5 w-5 shrink-0 text-leaf" />
               <p className="text-sm leading-relaxed text-brown-soft">
                 <span className="font-bold text-brown">
-                  Exemple réel de fiche de séjour :
+                  Un séjour tout en douceur :
                 </span>{" "}
-                à la fin des vacances de Nuts, lapin nain bélier de 8 ans,
-                Amélie a envoyé cette fiche à ses propriétaires — un aperçu
-                concret des nouvelles partagées pendant chaque séjour.
+                des nouvelles régulières, beaucoup d’attention et un cadre
+                pensé pour que votre compagnon se sente comme à la maison.
               </p>
             </div>
+
+            <div className="relative overflow-hidden rounded-3xl shadow-lg ring-1 ring-brown/5">
+              <ZoomableImage
+                src={fiche}
+                alt="Affiche de présentation de la PompiHouse et de ses attentions pour les animaux accueillis"
+                sizes="(max-width: 1024px) 90vw, 420px"
+                className="h-auto w-full object-contain"
+              />
+            </div>
+          </div>
+
+          <div className="space-y-5">
+            {reviews.map((review) => (
+              <figure
+                key={review.name}
+                className="rounded-2xl bg-cream p-6 ring-1 ring-brown/5"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <figcaption className="text-sm font-bold text-brown">
+                    {review.name}
+                  </figcaption>
+                  <span
+                    aria-label="5 étoiles sur Google"
+                    className="text-amber-500"
+                    title="Avis Google"
+                  >
+                    ★★★★★
+                  </span>
+                </div>
+                <blockquote className="mt-3 text-sm leading-relaxed text-brown-soft">
+                  « {review.quote} »
+                </blockquote>
+                <a
+                  href={"googleMapsUrl" in review ? review.googleMapsUrl : "https://www.google.com/maps/place/La+PompiHouse"}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-block text-xs font-bold uppercase tracking-wide text-olive-dark underline underline-offset-4"
+                >
+                  Voir sur Google Maps
+                </a>
+              </figure>
+            ))}
 
             <div className="flex items-start gap-3 rounded-2xl bg-cream p-5 ring-1 ring-brown/5">
               <CloverIcon className="mt-1 h-5 w-5 shrink-0 text-olive-dark" />

@@ -1,11 +1,12 @@
-import Image from "next/image";
 import logo from "@/assets/images/logo.png";
+import { ZoomableImage } from "@/components/ZoomableImage";
 
 const NAV_LINKS = [
   { href: "#presentation", label: "Présentation" },
   { href: "#environnement", label: "Environnement" },
   { href: "#prestations", label: "Prestations" },
   { href: "#avis", label: "Avis" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -14,7 +15,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-brown/10 bg-cream/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
         <a href="#accueil" className="flex items-center gap-3">
-          <Image
+          <ZoomableImage
             src={logo}
             alt="La PompiHouse"
             className="h-12 w-12 object-contain sm:h-14 sm:w-14"
