@@ -27,7 +27,7 @@ export default function Home() {
             Médium, Énergéticienne
           </h1>
           <p className="reveal mt-4 max-w-xl text-base text-ink/75 sm:text-lg">
-            Guidance &amp; soin énergétique — à distance en visio ou à mon
+            Guidance et soin énergétique, à distance en visio ou à mon
             cabinet.
           </p>
           <div className="reveal mt-8 flex flex-wrap items-center gap-4">
@@ -90,11 +90,11 @@ export default function Home() {
               <h3 className="mt-2 font-display text-2xl italic text-ink">Guidances</h3>
               <p className="mt-3 text-sm text-ink/70">
                 Des réponses à vos questions, l&apos;éclairage sur vos
-                blocages et avancer avec plus de clarté — à distance, par appel
+                blocages et avancer avec plus de clarté, à distance, par appel
                 vidéo.
               </p>
               <p className="mt-6 text-sm text-ink/50">
-                À partir de {guidances[0].price} — {guidances[0].duration}
+                À partir de {guidances[0].price}, {guidances[0].duration}
               </p>
             </div>
             <div className="rounded-2xl border border-mauve/25 bg-gradient-to-br from-mauve/10 via-paper to-paper p-8">
@@ -106,10 +106,10 @@ export default function Home() {
               </h3>
               <p className="mt-3 text-sm text-ink/70">
                 Bilan et manipulation énergétique pour adultes, enfants et
-                animaux — à distance ou à mon cabinet.
+                animaux, à distance ou à mon cabinet.
               </p>
               <p className="mt-6 text-sm text-ink/50">
-                À partir de {soins[0].price} — {soins[0].duration}
+                À partir de {soins[0].price}, {soins[0].duration}
               </p>
             </div>
           </div>

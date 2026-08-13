@@ -35,7 +35,7 @@ export default function ZoomableImage({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        aria-label={`Agrandir la photo — ${alt}`}
+        aria-label={`Agrandir la photo : ${alt}`}
         className="group absolute inset-0 h-full w-full cursor-zoom-in"
       >
         <Image src={src} alt={alt} fill sizes={sizes} className={className} />

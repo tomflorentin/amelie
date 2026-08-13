@@ -4,9 +4,10 @@ import { FlameIcon } from "@/components/icons";
 import ZoomableImage from "@/components/ZoomableImage";
 
 export const metadata: Metadata = {
-  title: "Bougie d'harmonisation",
+  title: "Bougie d'harmonisation énergétique artisanale",
   description:
     "Bougie d'harmonisation énergétique artisanale, faite main et personnalisable par Amélienergie.",
+  keywords: ["bougie énergétique", "bougie artisanale", "bougie personnalisée", "harmonisation énergétique"],
 };
 
 export default function Bougie() {

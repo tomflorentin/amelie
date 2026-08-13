@@ -92,7 +92,7 @@ export function Avis() {
                   Envie d&apos;être parmi les premiers avis ?
                 </span>{" "}
                 Confiez votre compagnon à la PompiHouse et partagez votre
-                expérience — elle aidera d&apos;autres propriétaires à
+                expérience, elle aidera d&apos;autres propriétaires à
                 choisir en toute confiance.
               </p>
             </div>

@@ -1,26 +1,16 @@
-import { LeafIcon, PawIcon } from "@/components/Decorations";
+import { LeafIcon } from "@/components/Decorations";
 
 const OFFERS = [
   {
-    icon: PawIcon,
-    title: "Pension pour lapins",
-    description:
-      "Un espace sécurisé, intérieur et extérieur, pour que votre lapin profite de ses vacances en toute tranquillité.",
-    items: [
-      "Espace sécurisé, adapté en intérieur et en extérieur",
-      "Soins quotidiens personnalisés (alimentation, surveillance, câlins)",
-      "Nouvelles et photos envoyées régulièrement pendant le séjour",
-    ],
-  },
-  {
     icon: LeafIcon,
-    title: "Pension pour rongeurs (NAC)",
+    title: "Pension pour lapins et rongeurs",
     description:
-      "Cochons d'Inde et autres petits rongeurs sont accueillis avec la même attention, dans un environnement calme et verdoyant.",
+      "La PompiHouse accueille les lapins, cochons d'Inde et autres petits rongeurs dans un environnement calme, verdoyant et adapté aux besoins de chaque espèce.",
     items: [
-      "Environnement propre, calme et verdoyant",
-      "Soins adaptés aux besoins de chaque espèce",
-      "Liste des espèces acceptées communiquée sur demande",
+      "Espaces sécurisés en intérieur et en extérieur",
+      "Soins quotidiens personnalisés selon chaque compagnon",
+      "Nouvelles et photos envoyées régulièrement pendant le séjour",
+      "Autres demandes de NAC étudiées au cas par cas",
     ],
   },
 ];
@@ -42,7 +32,7 @@ export function Prestations() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+        <div className="mt-10">
           {OFFERS.map(({ icon: Icon, title, description, items }) => (
             <div
               key={title}

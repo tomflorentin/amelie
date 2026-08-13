@@ -43,9 +43,8 @@ export function Header() {
 
         <a
           href="tel:+33680619766"
-          className="inline-flex shrink-0 items-center gap-2 rounded-full bg-olive px-4 py-2 text-sm font-bold text-cream shadow-sm transition hover:bg-olive-dark sm:px-5"
+          className="inline-flex shrink-0 items-center rounded-full bg-olive px-4 py-2 text-sm font-bold text-cream shadow-sm transition hover:bg-olive-dark sm:px-5"
         >
-          <span aria-hidden="true">🐾</span>
           <span className="hidden sm:inline">06 80 61 97 66</span>
           <span className="sm:hidden">Appeler</span>
         </a>

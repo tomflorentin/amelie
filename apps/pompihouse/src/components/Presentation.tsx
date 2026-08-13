@@ -1,6 +1,6 @@
 import logo from "@/assets/images/logo.png";
 import { ZoomableImage } from "@/components/ZoomableImage";
-import { CloverIcon, LeafIcon, PawIcon } from "@/components/Decorations";
+import { CloverIcon, LeafIcon } from "@/components/Decorations";
 
 const HIGHLIGHTS = [
   {
@@ -9,7 +9,7 @@ const HIGHLIGHTS = [
     text: "Chalet en bois et jardin verdoyant à La Motte, loin du bruit et du stress.",
   },
   {
-    icon: PawIcon,
+    icon: CloverIcon,
     title: "Une attention quotidienne",
     text: "Amélie s'occupe de chaque pensionnaire avec des soins personnalisés, jour après jour.",
   },
@@ -47,7 +47,7 @@ export function Presentation() {
               La PompiHouse est une pension familiale pour lapins et
               rongeurs, installée à La Motte, dans le Var. Amélie y accueille
               vos compagnons avec attention, dans un cadre naturel et
-              sécurisé, pour des séjours sans stress — pour eux comme pour
+              sécurisé, pour des séjours sans stress, pour eux comme pour
               vous.
             </p>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-brown-soft">

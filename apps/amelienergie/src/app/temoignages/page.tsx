@@ -7,8 +7,10 @@ import amelienergieReviews from "@google-reviews-data/amelienergie.json";
 import { testimonials } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Témoignages",
-  description: "Les témoignages des personnes accompagnées par Amélienergie.",
+  title: "Avis et témoignages",
+  description:
+    "Découvrez les avis et témoignages des personnes accompagnées par Amélienergie lors de guidances et de soins énergétiques.",
+  keywords: ["avis médium", "témoignages soin énergétique", "avis Amélienergie", "avis guidance"],
 };
 
 export default function Temoignages() {

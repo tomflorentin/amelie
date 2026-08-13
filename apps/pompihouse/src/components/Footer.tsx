@@ -33,7 +33,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-cream-deep/85">
               <li>
                 <a href="tel:+33680619766" className="hover:text-leaf">
-                  Amélie — 06 80 61 97 66
+                  Amélie, 06 80 61 97 66
                 </a>
               </li>
               <li>
@@ -51,7 +51,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-leaf"
                 >
-                  La Motte (83 — Var)
+                  La Motte, 83, Var
                 </a>
               </li>
             </ul>
@@ -76,7 +76,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-cream-deep/15 pt-6 text-xs text-cream-deep/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} La PompiHouse — La Motte (83, Var).</p>
+          <p>© {new Date().getFullYear()} La PompiHouse, La Motte (83, Var).</p>
           <p>Tarifs, horaires et modalités précises communiqués sur demande.</p>
         </div>
       </div>

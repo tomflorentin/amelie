@@ -12,7 +12,7 @@ export default function Footer() {
         <div>
           <BrandLogo compact />
           <p className="mt-2 max-w-xs text-sm text-ink/65">
-            Médium et énergéticienne diplômée — guidance et soin énergétique,
+            Médium et énergéticienne diplômée, guidance et soin énergétique,
             à distance ou à mon cabinet.
           </p>
         </div>

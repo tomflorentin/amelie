@@ -2,9 +2,17 @@ import type { Metadata } from "next";
 import { contact, guidances, soins, type Service } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Consultations",
+  title: "Guidances et soins énergétiques",
   description:
     "Guidances et soins énergétiques d'Amélienergie : durées et tarifs. Réservation par téléphone ou message.",
+  keywords: [
+    "guidance à distance",
+    "consultation médium",
+    "soin énergétique à distance",
+    "Reiki",
+    "soin énergétique animal",
+    "tarif guidance",
+  ],
 };
 
 function ServiceRow({ service }: { service: Service }) {

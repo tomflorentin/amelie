@@ -4,9 +4,10 @@ import { contact } from "@/lib/content";
 import ZoomableImage from "@/components/ZoomableImage";
 
 export const metadata: Metadata = {
-  title: "Présentation",
+  title: "À propos d'Amélie, médium énergéticienne",
   description:
     "Amélie, médium énergéticienne : parcours, guidances, soins énergétiques et boutique ésothérique.",
+  keywords: ["Amélie médium", "énergéticienne diplômée", "Reiki Usui", "guidance spirituelle"],
 };
 
 export default function Presentation() {
@@ -80,7 +81,7 @@ export default function Presentation() {
                 Formation
               </p>
               <p className="mt-1">
-                Praticienne certifiée Reiki Usui Shiki Ryoho — Shoden &amp;
+                Praticienne certifiée Reiki Usui Shiki Ryoho, Shoden et
                 Okuden.
               </p>
             </div>
@@ -91,10 +92,10 @@ export default function Presentation() {
               Conditions de vente
             </p>
             <p>
-              — Le temps indiqué des consultations est le temps maximal, il
+              Le temps indiqué des consultations est le temps maximal, il
               peut donc être plus court si le travail est fini.
             </p>
-            <p>— Les prestations sont non remboursables.</p>
+            <p>Les prestations sont non remboursables.</p>
           </div>
         </div>
       </div>

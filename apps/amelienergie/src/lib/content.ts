@@ -161,7 +161,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Patricia",
     quote:
-      "Belle découverte d'Amélie sur TikTok. Depuis un an et demi, petite question ou message, toujours juste sans nous voir ni nous connaître. Ce qui a donné plusieurs consultations, au top, réponses et guidage pour ce qui est bien pour nous — on en apprend sur soi. Ça permet d'avancer au mieux. Ce qui m'a donné envie de faire les méditations énergétiques, et quelles découvertes de magnifiques voyages à l'intérieur de soi, et de travail pour enlever tous les blocages. Je suis en train de changer, je deviens moi-même, et ce n'est pas fini. Un grand merci à toi Amélie pour ce que tu me fais vivre et m'apportes. Un tel bien-être. À bientôt.",
+      "Belle découverte d'Amélie sur TikTok. Depuis un an et demi, petite question ou message, toujours juste sans nous voir ni nous connaître. Ce qui a donné plusieurs consultations, au top, réponses et guidage pour ce qui est bien pour nous, on en apprend sur soi. Ça permet d'avancer au mieux. Ce qui m'a donné envie de faire les méditations énergétiques, et quelles découvertes de magnifiques voyages à l'intérieur de soi, et de travail pour enlever tous les blocages. Je suis en train de changer, je deviens moi-même, et ce n'est pas fini. Un grand merci à toi Amélie pour ce que tu me fais vivre et m'apportes. Un tel bien-être. À bientôt.",
   },
   {
     name: "Mariella",

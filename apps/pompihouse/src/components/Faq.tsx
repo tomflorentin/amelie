@@ -1,10 +1,12 @@
 import {
   CameraIcon,
-  PawIcon,
+  ClockIcon,
+  RabbitIcon,
+  ShieldIcon,
   SnowflakeIcon,
 } from "@/components/Decorations";
 
-const FAQ_ICONS = [PawIcon, SnowflakeIcon, CameraIcon, PawIcon];
+const FAQ_ICONS = [RabbitIcon, SnowflakeIcon, CameraIcon, ClockIcon, ShieldIcon];
 
 const FAQ_ITEMS = [
   {
@@ -15,7 +17,7 @@ const FAQ_ITEMS = [
   {
     question: "Comment gérez-vous le chaud et le froid ?",
     answer:
-      "Les pensionnaires disposent d'espaces intérieurs chauffés en hiver et climatisés lorsque les températures montent. En été, les installations privilégient aussi l'ombre, la fraîcheur et une bonne circulation de l'air. Selon leurs habitudes et la météo, les animaux profitent d'un équilibre entre espaces intérieurs et extérieurs, toujours sous surveillance.",
+      "Les pensionnaires disposent d'espaces intérieurs chauffés en hiver et climatisés lorsque les températures montent. En été, les installations privilégient aussi l'ombre, la fraîcheur et une bonne circulation de l'air. Selon leurs habitudes et la météo, les animaux profitent d'un équilibre entre espaces intérieurs et extérieurs.",
   },
   {
     question: "Comment avoir des nouvelles pendant le séjour ?",
@@ -27,11 +29,30 @@ const FAQ_ITEMS = [
     answer:
       "Les horaires de dépôt et de récupération sont flexibles afin de s'adapter au mieux à votre organisation. Contactez Amélie par téléphone pour convenir ensemble d'un créneau pratique.",
   },
+  {
+    question: "Mon animal supporte mal la cage, quelles solutions proposez-vous ?",
+    answer:
+      "Des solutions flexibles peuvent être mises en place selon les besoins de votre compagnon. Il peut profiter d'un espace extérieur adapté pendant la journée, puis retrouver sa cage uniquement la nuit, pour garantir sa sécurité et son repos.",
+  },
 ];
 
 export function Faq() {
   return (
     <section id="faq" className="bg-cream-deep">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: FAQ_ITEMS.map(({ question, answer }) => ({
+              "@type": "Question",
+              name: question,
+              acceptedAnswer: { "@type": "Answer", text: answer },
+            })),
+          }),
+        }}
+      />
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-bold uppercase tracking-wide text-olive-dark">
