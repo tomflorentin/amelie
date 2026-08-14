@@ -8,6 +8,7 @@ RUN npm ci
 
 FROM node:24-alpine AS builder
 WORKDIR /repo
+ENV NEXT_TELEMETRY_DISABLED=1
 COPY --from=deps /repo/node_modules ./node_modules
 COPY . .
 RUN npm run build
@@ -16,6 +17,7 @@ RUN npm prune --omit=dev
 FROM node:24-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 RUN addgroup -S nextjs && adduser -S nextjs -G nextjs
 
 COPY start.js ./start.js
