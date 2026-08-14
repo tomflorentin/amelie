@@ -1,8 +1,15 @@
 {
   "name": "amelienergie-workspace",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "concurrently -n amelienergie,pompihouse -c blue,magenta \"npm run dev --prefix apps/amelienergie\" \"npm run dev --prefix apps/pompihouse\""
+    "dev": "concurrently -n amelienergie,pompihouse -c blue,magenta \"npm run dev --workspace=amelienergie\" \"npm run dev --workspace=pompihouse\"",
+    "build": "npm run build --workspace=amelienergie && npm run build --workspace=pompihouse",
+    "start": "NODE_ENV=production node start.js",
+    "lint": "npm run lint --workspaces --if-present"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
